@@ -10,10 +10,10 @@ jobs:
     name: Test Action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Setup terraform-backend-git
-        uses: plumber-cd/terraform-backend-git@master
+        uses: plumber-cd/setup-terraform-backend-git@v1
         with:
-          version: v0.1.2
+          version:
+            0.1.2
       - name: Use command
         run: terraform-backend-git version
